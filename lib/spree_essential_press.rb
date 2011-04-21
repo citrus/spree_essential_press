@@ -1,0 +1,3 @@
+module SpreeEssentialPress
+  # Your code goes here...
+end
