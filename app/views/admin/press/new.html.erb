@@ -1,0 +1,12 @@
+<%= render :partial => 'admin/shared/contents_sub_menu' unless SpreeEssentialPress.independent? %>
+
+<h1><%= t('.new') %></h1>
+
+<%= form_for(@press, :url => collection_url, :html => { :multipart => true }) do |f| %>
+  <%= render :partial => "form", :locals => { :f => f } %>
+
+  <p class="form-buttons">
+    <%= button t('create') %> <%= link_to t('cancel'), collection_url %>
+  </p>
+<% end %>
+

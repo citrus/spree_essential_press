@@ -1,0 +1,72 @@
+<%= render :partial => 'admin/shared/contents_sub_menu' unless SpreeEssentialPress.independent? %>
+
+<div class='toolbar'>
+  <ul class='actions'>
+    <li>
+      <p><%= button_link_to t('.new'), new_admin_press_path, :icon => 'add' %></p>
+    </li>
+  </ul>
+  <br class='clear' />
+</div>
+
+
+<h1><%= t('.listing') %></h1>
+
+<table class="index">
+  <thead>
+	<tr>
+    	<th><%= sort_link @search, :title %></th>
+    	<th><%= sort_link @search, :publication %></th>
+    	<th><%= sort_link @search, :published_at %></th>
+    	<th><%= t('action') %></th>
+	</tr>
+  </thead>
+  <tbody>
+    <%- @collection.each do |press|%>
+    <tr id="<%= dom_id press %>">
+      <td width="200px"><%= link_to press.title, admin_press_path(press) %></td>
+      <td><%= press.publication %></td>
+      <td><%= press.published_at.to_s(:long) %></td>
+      <td>
+      	<%= link_to_edit press %> &nbsp;
+      	<%= link_to_delete press %> &nbsp;
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= will_paginate(:prev => "&#171; #{t('previous')}", :next => "#{t('next')} &#187;") %>
+
+
+<% content_for :sidebar do %>
+<div class="box">
+  <h3><%= t(:search) %></h3>
+
+  <% @press = Press.metasearch %>
+  <%= form_for [:admin, @press] do |f| %>
+    <%- locals = {:f => f} %>
+    <%= hook :admin_press_index_search, locals do %>
+      <p>
+        <label><%= t 'press.title' %></label><br />
+        <%= f.text_field :title_like, :size => 25 %>
+      </p>  
+      <label><%= t('date_range') %></label><br />
+      <div class="yui-g date-range-filter">
+        <div class="yui-u sub-field first">
+          <%= f.spree_date_picker :published_at_greater_than %><br />
+          <label class="sub"><%= t('start') %></label>
+        </div>
+        <div class="yui-u sub-field">
+          <%= f.spree_date_picker :published_at_less_than %><br />
+          <label><%= t('stop') %></label>
+        </div>
+        <br class="clear"/>
+      </div>
+    <% end %>
+    <%= hook :admin_press_index_search_buttons, locals do %>
+      <p><%= button t('search') %></p>
+    <% end %>
+  <% end %>
+</div>
+<% end %>

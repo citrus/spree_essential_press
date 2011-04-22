@@ -1,0 +1,20 @@
+<h1><%= (t(".editing_press") + " &ldquo;#{@press.title}&rdquo;").html_safe %></h1>
+
+<% content_for :sidebar do %>
+
+  <h3 class="name"><%= @press.title %><span class='sku'><%= (@press.published_at || Time.now).strftime('%x') %></span></h3>
+  <br clear="clear" />
+
+  <ul class="sidebar press-menu">
+    <%= hook :admin_press_tabs, {:current => current} do %>
+      <li<%= ' class="active"'.html_safe if current == "Press Details" %>>
+        <%= link_to t(".press_details"), edit_admin_press_url(@press) %>
+      </li>
+      <li<%= ' class="active"'.html_safe if current == "Images" %>>
+        <%= link_to t("images"), admin_press_images_url(@press) %>
+      </li> 
+    <% end %>
+  </ul>
+  <br clear="clear" />
+
+<% end %>

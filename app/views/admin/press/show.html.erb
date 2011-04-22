@@ -1,0 +1,16 @@
+<%= render :partial => 'admin/shared/contents_sub_menu' unless SpreeEssentialPress.independent? %>
+
+<%= render 'admin/shared/press_tabs', :current => "" %>
+
+<h1><%= @press.title %></h1>
+<h3><%= @press.publication %></h4>
+<h4><%= @press.published_at.to_s(:long) %></h4>
+
+<%= simple_format @press.description %>
+
+<p><%= link_to @press.url, @press.url %></p>
+
+<p>
+  <%= link_to_edit @press %> &nbsp;
+  <%= link_to t('back'), collection_url %>
+</p>

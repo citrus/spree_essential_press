@@ -1,0 +1,8 @@
+<%= render 'admin/shared/press_tabs', :current => "Press Details" %>
+
+<% form_for(@press, :url => object_url, :html => { :multipart => true, :method => :put }) do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <p class="form-buttons">
+    <%= button t('update') %> <%= link_to t('cancel'), collection_url %>
+  </p>
+<% end %>

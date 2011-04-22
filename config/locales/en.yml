@@ -1,0 +1,44 @@
+en:
+
+  activerecord:
+    errors:
+      messages:
+        invalid_date_time: is an invalid date.
+        
+  press:
+    title: Title
+    publication: Publication
+    published_at: Published At
+    description: Description
+    url: URL
+    
+    index:
+      press: Press
+    
+  admin:
+    press:
+      index:
+        new: New Press Mention
+        listing: Listing Press Mentions
+        
+      new: 
+        new: New Press Mention
+      edit:
+        edit: Edit Press Mention
+        
+    tabs:
+      press: Press
+      
+    subnav:
+      press: Press
+  
+  
+    shared:
+      press_tabs:
+        editing_press: Edit Press Mention 
+        press_details: Press Mention Details
+        
+    
+  successfully_created: Successfully created
+  successfully_updated: Successfully updated
+  successfully_destroyed: Successfully destroyed

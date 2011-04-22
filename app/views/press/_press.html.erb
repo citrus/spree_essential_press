@@ -1,0 +1,16 @@
+<div class="press-mention">
+  
+  <% press.images.each do |image| %>
+    <div class="press-image">
+      <%= image_tag image.attachment.url(:medium), :alt => image.alt || @press.title %>
+    </div>
+  <% end %>    
+  
+  <div class="press-info">
+    <h2><%= press.title %></h2>
+    <h3><%= press.publication %></h3>
+    <h4><%= press.published_at %></h4>
+    <%= simple_format press.description %>
+  </div>
+  
+</div>

@@ -6,16 +6,30 @@ Gem::Specification.new do |s|
   s.name        = "spree_essential_press"
   s.version     = SpreeEssentialPress::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
-  s.homepage    = ""
+  s.authors     = ["Spencer Steffen"]
+  s.email       = ["spencer@citrusme.com"]
+  s.homepage    = "http://github.com/citrus/spree_essential_press"
   s.summary     = %q{TODO: Write a gem summary}
   s.description = %q{TODO: Write a gem description}
-
-  s.rubyforge_project = "spree_essential_press"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
+ 
+  # Spree
+  s.add_dependency('spree_core', '>= 0.30.1')
+  s.add_dependency('spree_auth', '>= 0.30.1')
+   
+  # Development
+	s.add_development_dependency('shoulda',            '>= 2.11.3')
+	s.add_development_dependency('factory_girl',       '>= 2.0.0.beta2')
+	s.add_development_dependency('cucumber',           '>= 0.10.2')
+	s.add_development_dependency('capybara',           '>= 0.4.1')
+	s.add_development_dependency('selenium-webdriver', '>= 0.1.3')
+  s.add_development_dependency('sqlite3',            '>= 1.3.3')
+  s.add_development_dependency('faker',              '>= 0.9.5')
+  s.add_development_dependency('spork',              '>= 0.9.0.rc5')
+  s.add_development_dependency('spork-testunit',     '>= 0.0.5')
+  
 end
