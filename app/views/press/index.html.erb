@@ -1,3 +1,15 @@
+<% content_for :sidebar do %>
+
+  <ul class="press-sidebar">
+  <% @press.each do |press| %>
+    <li>
+      <%= link_to press.title, "##{dom_id(press)}" %>
+      <span class="press-date"><%= press.published_at.strftime('%B %A %d, %Y').gsub(/\s0/, ' ') %></span>
+    </li>
+  <% end %>
+  </ul>
+<% end %>
+
 <h1><%= t('.press') %></h1>
 
 <%= render :partial => "press", :collection => @press %>

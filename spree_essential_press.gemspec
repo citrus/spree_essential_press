@@ -20,7 +20,10 @@ Gem::Specification.new do |s|
   # Spree
   s.add_dependency('spree_core', '>= 0.30.1')
   s.add_dependency('spree_auth', '>= 0.30.1')
-   
+  
+  # Pre 0.50.0
+  s.add_dependency('meta_search', '>= 1.0.1')
+     
   # Development
 	s.add_development_dependency('shoulda',            '>= 2.11.3')
 	s.add_development_dependency('factory_girl',       '>= 2.0.0.beta2')

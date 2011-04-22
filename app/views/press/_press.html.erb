@@ -1,4 +1,4 @@
-<div class="press-mention">
+<div class="press-mention" id="<%= dom_id(press) %>">
   
   <% press.images.each do |image| %>
     <div class="press-image">
@@ -8,9 +8,16 @@
   
   <div class="press-info">
     <h2><%= press.title %></h2>
-    <h3><%= press.publication %></h3>
-    <h4><%= press.published_at %></h4>
+    <% unless press.publication.blank? %>
+      <h3><%= press.publication %></h3>
+    <% end %>
+    <h5><%= press.published_at.strftime('%B %A %d, %Y').gsub(/\s0/, ' ') %></h5>
+
     <%= simple_format press.description %>
+    
+    <%= link_to t('.read_more'), press.url, :class => 'popup' unless press.url.blank? %>    
   </div>
+  
+  <br class="clear"/>
   
 </div>
