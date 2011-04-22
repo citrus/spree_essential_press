@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Spencer Steffen"]
   s.email       = ["spencer@citrusme.com"]
   s.homepage    = "http://github.com/citrus/spree_essential_press"
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Spree Essential Press is a Spree extension for featuring your press exposure online.}
+  s.description = %q{Spree Essential Press was designed with spree_essentials in mind but can be used without.}
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

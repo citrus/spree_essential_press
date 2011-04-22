@@ -9,7 +9,7 @@ class Admin::PressTest < ActiveSupport::IntegrationCase
   
   should "require login" do
     visit admin_press_index_path
-    sleep 10
+    #sleep 10
   end
   
 end
