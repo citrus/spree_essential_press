@@ -12,7 +12,7 @@
 
 <%= f.field_container :published_at do %>
   <%= f.label :published_at, t('press.published_at') %><br />
-  <%= form.text_field :published_at, :class => 'text', :value => (@post.posted_at.to_s(:long) unless @post.new_record?) %><br />
+  <%= f.text_field :published_at, :class => 'text', :value => (@press.published_at.to_s(:long) unless @press.new_record?) %><br />
   <%= error_message_on :press, :published_at %>
 <% end %>
 
@@ -29,13 +29,11 @@
 <% end %>
 
 <% content_for :head do %>
-  <%= stylesheet_link_tag "markitup.css" %>
-  <%= javascript_include_tag 'date.js', 'jquery.autodate.js', 'jquery.markitup.js', 'markdown.set.js' %>
+  <%= javascript_include_tag 'date.js', 'jquery.autodate.js' %>
   <script type="text/javascript">
   //<![CDATA[
     $(document).ready(function() {
-      $('#post_posted_at').autodate();
-      $('#post_body').markItUp(markdownSettings);
+      $('#press_published_at').autodate();
     }); 
   //]]>
   </script>
