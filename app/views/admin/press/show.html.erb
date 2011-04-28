@@ -4,7 +4,11 @@
 
 <h1><%= @press.title %></h1>
 <h3><%= @press.publication %></h4>
-<h4><%= @press.published_at.to_s(:long) %></h4>
+<h4><%= @press.published_at.strftime('%x') %></h4>
+
+<% @press.images.each do |image| %>
+  <%= image_tag image.attachment.url(:small), :alt => image.alt || @press.title %>
+<% end %>
 
 <%= simple_format @press.description %>
 
