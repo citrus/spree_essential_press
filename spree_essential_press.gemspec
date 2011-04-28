@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Spencer Steffen"]
   s.email       = ["spencer@citrusme.com"]
-  s.homepage    = "http://github.com/citrus/spree_essential_press"
+  s.homepage    = "https://github.com/citrus/spree_essential_press"
   s.summary     = %q{Spree Essential Press is a Spree extension for featuring your press exposure online.}
   s.description = %q{Spree Essential Press was designed with spree_essentials in mind but can be used without.}
 
