@@ -13,7 +13,7 @@ class PressImage < Image
     has_attached_file :attachment,
       :styles => Proc.new{ |clip| clip.instance.attachment_sizes },
       :default_style => :medium,
-      :url => "/assets/posts/:id/:style/:basename.:extension",
+      :url => "/assets/press/:id/:style/:basename.:extension",
       :path => ":rails_root/public/assets/press/:id/:style/:basename.:extension"
   end 
  
