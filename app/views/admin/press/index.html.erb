@@ -26,7 +26,7 @@
     <tr id="<%= dom_id press %>">
       <td width="200px"><%= link_to press.title, admin_press_path(press) %></td>
       <td><%= press.publication %></td>
-      <td><%= press.published_at.to_s(:long) %></td>
+      <td><%= press.published_at.strftime('%x') %></td>
       <td>
       	<%= link_to_edit press %> &nbsp;
       	<%= link_to_delete press %> &nbsp;
