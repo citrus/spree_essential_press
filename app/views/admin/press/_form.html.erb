@@ -12,7 +12,7 @@
 
 <%= f.field_container :published_at do %>
   <%= f.label :published_at, t('press.published_at') %><br />
-  <%= f.text_field :published_at, :class => 'text' %>
+  <%= f.date_select :published_at, :order => [:month, :day, :year] %>
   <%= error_message_on :press, :published_at %>
 <% end %>
 

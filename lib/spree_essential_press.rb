@@ -28,5 +28,5 @@ end
 if SpreeEssentialPress.independent?
   require 'spree_essential_press/custom_hooks'
 else 
-  SpreeEssentials.register SpreeEssentialPress 
+  SpreeEssentials.register :press, SpreeEssentialPress 
 end

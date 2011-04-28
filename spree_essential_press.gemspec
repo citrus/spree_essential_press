@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
   s.add_dependency('meta_search', '>= 1.0.1')
      
   # Development
+  s.add_development_dependency('spree_essentials',   '>= 0.1.0.pre')
 	s.add_development_dependency('shoulda',            '>= 2.11.3')
 	s.add_development_dependency('factory_girl',       '>= 2.0.0.beta2')
 	s.add_development_dependency('cucumber',           '>= 0.10.2')

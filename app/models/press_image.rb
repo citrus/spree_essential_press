@@ -6,7 +6,7 @@ class PressImage < Image
     has_attached_file :attachment,
       :styles => Proc.new{ |clip| clip.instance.attachment_sizes },
       :default_style => :medium,
-      :path => "assets/posts/:id/:style/:basename.:extension",
+      :path => "assets/press/:id/:style/:basename.:extension",
       :storage => "s3",
       :s3_credentials => "#{Rails.root}/config/s3.yml"
   else
@@ -14,7 +14,7 @@ class PressImage < Image
       :styles => Proc.new{ |clip| clip.instance.attachment_sizes },
       :default_style => :medium,
       :url => "/assets/posts/:id/:style/:basename.:extension",
-      :path => ":rails_root/public/assets/posts/:id/:style/:basename.:extension"
+      :path => ":rails_root/public/assets/press/:id/:style/:basename.:extension"
   end 
  
   def image_content?
