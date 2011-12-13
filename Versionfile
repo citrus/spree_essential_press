@@ -1,2 +1,4 @@
-"0.50.x" => { :branch => "master" }
-"0.40.x" => { :branch => "master" }
+"0.70.x" => { :branch => "0.70.x" }
+"0.60.x" => { :branch => "0.60.x" }
+"0.50.x" => { :branch => "0.60.x" }
+"0.40.x" => { :branch => "0.60.x" }
