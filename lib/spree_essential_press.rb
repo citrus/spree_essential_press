@@ -5,7 +5,7 @@ require 'spree_essential_press/inflection'
 module SpreeEssentialPress
   
   def self.tab
-    [:press, { :route => :admin_press_index }]
+    { :label => 'Press', :route => :admin_press_index }
   end
   
   def self.sub_tab
