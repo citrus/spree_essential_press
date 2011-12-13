@@ -8,7 +8,7 @@ FactoryGirl.define do
   end
   
   factory :press_image do
-    attachment File.open(File.expand_path("../../dummy/public/images/cart-empty.png", __FILE__))
+    attachment File.open(File.expand_path("../images/1.png", __FILE__))
     alt "Just an image"
   end
 
