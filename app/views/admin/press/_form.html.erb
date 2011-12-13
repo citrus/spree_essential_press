@@ -12,7 +12,7 @@
 
 <%= f.field_container :published_at do %>
   <%= f.label :published_at, t('press.published_at') %><br />
-  <%= f.text_field :published_at, :class => 'text', :value => (@press.published_at.to_s(:long) unless @press.new_record?) %><br />
+  <%= f.date_select :published_at, :order => [ :month, :day, :year ] %><br />
   <%= error_message_on :press, :published_at %>
 <% end %>
 
@@ -26,15 +26,4 @@
   <%= f.label :url, t('press.url') %><br />
   <%= f.text_field :url, :class => 'text' %>
   <%= error_message_on :press, :url %>
-<% end %>
-
-<% content_for :head do %>
-  <%= javascript_include_tag 'date.js', 'jquery.autodate.js' %>
-  <script type="text/javascript">
-  //<![CDATA[
-    $(document).ready(function() {
-      $('#press_published_at').autodate();
-    }); 
-  //]]>
-  </script>
 <% end %>
