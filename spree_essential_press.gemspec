@@ -18,22 +18,17 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
  
   # Spree
-  s.add_dependency('spree_core', '>= 0.30.1')
-  s.add_dependency('spree_auth', '>= 0.30.1')
+  s.add_dependency('spree_core', '>= 0.70.0')
   
-  # Pre 0.50.0
-  s.add_dependency('meta_search', '>= 1.0.1')
-     
   # Development
-  s.add_development_dependency('spree_essentials',   '>= 0.1.0.pre')
-	s.add_development_dependency('shoulda',            '>= 2.11.3')
-	s.add_development_dependency('factory_girl',       '>= 2.0.0.beta2')
-	s.add_development_dependency('cucumber',           '>= 0.10.2')
-	s.add_development_dependency('capybara',           '>= 0.4.1')
-	s.add_development_dependency('selenium-webdriver', '>= 0.1.3')
+  s.add_development_dependency('spree_essentials',   '>= 0.3.0')
+  s.add_development_dependency('dummier',            '>= 0.2.4')
+	s.add_development_dependency('shoulda',            '>= 3.0.0.beta2')
+	s.add_development_dependency('factory_girl',       '>= 2.3.2')
+	s.add_development_dependency('capybara',           '>= 1.1.2')
+	s.add_development_dependency('selenium-webdriver', '>= 2.15.0')
   s.add_development_dependency('sqlite3',            '>= 1.3.3')
-  s.add_development_dependency('faker',              '>= 0.9.5')
-  s.add_development_dependency('spork',              '>= 0.9.0.rc5')
-  s.add_development_dependency('spork-testunit',     '>= 0.0.5')
+  s.add_development_dependency('spork',              '>= 0.9.0.rc9')
+  s.add_development_dependency('spork-testunit',     '>= 0.0.7')
   
 end
