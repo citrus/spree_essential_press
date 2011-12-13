@@ -1,29 +1,29 @@
 <%= f.field_container :title do %>
-  <%= f.label :title, t('press.title') %><br />
+  <%= f.label :title, t('activerecord.attributes.press.title') %><br />
   <%= f.text_field :title, :class => 'title' %>
   <%= error_message_on :press, :title %>
 <% end %>
 
 <%= f.field_container :publication do %>
-  <%= f.label :publication, t('press.publication') %><br />
+  <%= f.label :publication, t('activerecord.attributes.press.publication') %><br />
   <%= f.text_field :publication, :class => 'text' %>
   <%= error_message_on :press, :publication %>
 <% end %>
 
 <%= f.field_container :published_at do %>
-  <%= f.label :published_at, t('press.published_at') %><br />
+  <%= f.label :published_at, t('activerecord.attributes.press.published_at') %><br />
   <%= f.date_select :published_at, :order => [ :month, :day, :year ] %><br />
   <%= error_message_on :press, :published_at %>
 <% end %>
 
 <%= f.field_container :description do %>
-  <%= f.label :description, t('press.description') %><br />
+  <%= f.label :description, t('activerecord.attributes.press.description') %><br />
   <%= f.text_area :description, :class => 'text' %>
   <%= error_message_on :press, :description %>
 <% end %>
 
 <%= f.field_container :url do %>
-  <%= f.label :url, t('press.url') %><br />
+  <%= f.label :url, t('activerecord.attributes.press.url') %><br />
   <%= f.text_field :url, :class => 'text' %>
   <%= error_message_on :press, :url %>
 <% end %>

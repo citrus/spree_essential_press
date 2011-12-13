@@ -46,7 +46,7 @@
   <% @press = Press.metasearch %>
   <%= form_for [:admin, @press] do |f| %>
     <p>
-      <label><%= t 'press.title' %></label><br />
+      <label><%= t 'activerecord.attributes.press.title' %></label><br />
       <%= f.text_field :title_like, :size => 25 %>
     </p>  
     <p><%= button t('search') %></p>

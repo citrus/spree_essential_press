@@ -4,23 +4,26 @@ en:
   successfully_updated: "%{resource} was successfully updated."
   successfully_removed: "%{resource} was successfully removed."
 
+  press: Press
+
   activerecord:
+    attributes:
+      press:
+        title: Title
+        publication: Publication
+        published_at: Published On
+        description: Description
+        url: URL        
+        
     errors:
       messages:
         invalid_date_time: is an invalid date.
-        
-  press:
-    title: Title
-    publication: Publication
-    published_at: Published On
-    description: Description
-    url: URL
     
-    index:
-      press: Press
-      
-    press:
-      read_more: Read More
+  #index:
+  #  press: Press
+  #  
+  #press:
+  #  read_more: Read More
     
   admin:
     press:
