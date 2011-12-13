@@ -1,26 +1,36 @@
-under construction...
+Spree Essential Press
+=====================
+
+A Press Page extension for Spree Commerce.
 
 
+Installation
+------------
 
-Testing
--------
+In your existing spree site, add the following to your Gemfile:
 
-Tests are written with shoulda, capybara and factory_girl and run quickly with spork. To get setup, run these commands:
+    gem 'spree_essential_press'
+    
+Now run:
 
+    bundle install
+    
+    
+Demo
+----
+
+You can easily use the test/dummy app as a demo of spree_essentials. Just `cd` to where you develop and run:
+    
     git clone git://github.com/citrus/spree_essential_press.git
     cd spree_essential_press
-    rake db:test_prep
-    spork
+    mv lib/dummy_hooks/after_migrate.rb.sample lib/dummy_hooks/after_migrate.rb
+    bundle install
+    bundle exec dummier
+    cd test/dummy
+    bundle exec rails s
     
-    # in another window
-    
-    cd to/your/spree_essential_press
-    
-    # just one test
-    testdrb test/unit/press_test.rb
-    
-    # just unit tests
-    testdrb test/unit/*
-    
-    # all tests
-    testdrb test/unit/** test/functional/** test/integration/**
+
+License
+-------
+
+Copyright (c) 2011 Spencer Steffen, released under the New BSD License All rights reserved.
