@@ -1,5 +1,5 @@
-Spree Essential Press
-=====================
+# Spree Essential Press [![Build Status](https://secure.travis-ci.org/citrus/spree_essential_press.png)](http://travis-ci.org/citrus/spree_essential_press)
+
 
 A Press Page extension for Spree Commerce.
 
@@ -33,4 +33,4 @@ You can easily use the test/dummy app as a demo of spree_essentials. Just `cd` t
 License
 -------
 
-Copyright (c) 2011 Spencer Steffen, released under the New BSD License All rights reserved.
+Copyright (c) 2011 Spencer Steffen & Citrus, released under the New BSD License All rights reserved.
